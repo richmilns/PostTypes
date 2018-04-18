@@ -1,14 +1,19 @@
 {
-    "name": "jjgrainger/posttypes",
+    "name": "richmilns/posttypes",
     "version": "2.0.1",
     "description": "Simple WordPress custom post types.",
-    "homepage": "https://github.com/jjgrainger/posttype",
+    "homepage": "https://github.com/richmilns/posttype",
     "license": "MIT",
     "authors": [
         {
             "name": "Joe Grainger",
             "email": "hello@jjgrainger.co.uk",
             "homepage": "http://jjgrainger.co.uk"
+        },
+        {
+            "name": "Rich Milns",
+            "email": "rich@milns.com",
+            "homepage": "http://guavadesign.co.uk"
         }
     ],
     "minimum-stability": "dev",
