@@ -1,5 +1,8 @@
 # Changelog
 
+##### v2.0.2
+* Automatic plural improvements
+
 ##### v2.0.1
 * merge [pull reqeuest #19](https://github.com/jjgrainger/PostTypes/pull/19): Use wp_dropdown_categories function for post filtering selectbox
 * update minimum php version to 5.6
