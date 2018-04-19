@@ -8,10 +8,22 @@
 
 #### Install with composer
 
-Run the following in your terminal to install PostTypes with [Composer](https://getcomposer.org/).
+Update your `composer.json` file with the following and then run `composer update` or `composer install`
 
 ```
-$ composer require jjgrainger/posttypes
+{
+...
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/richmilns/PostTypes"
+        }
+    ],
+    "require": {
+        "richmilns/PostTypes": "^2.0"
+    }
+...
+}
 ```
 
 As PostTypes uses [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloading you will need to use Composers autoloader. Below is a basic example of getting started with the class, though your setup maybe different depending on how you are using composer.
