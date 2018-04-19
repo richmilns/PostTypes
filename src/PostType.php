@@ -134,6 +134,21 @@ class PostType
     }
 
     /**
+     * Gets the default options for this PostType
+     * @since  2.0.4
+     * @return array
+     */
+    public function defaultOptions()
+    {
+        return [
+            'public' => true,
+            'rewrite' => [
+                'slug' => $this->slug
+            ]
+        ];
+    }
+
+    /**
      * Set the labels for the PostType
      * @param  array $labels An array of labels for the PostType
      * @return $this
@@ -306,16 +321,8 @@ class PostType
      */
     public function createOptions()
     {
-        // default options
-        $options = [
-            'public' => true,
-            'rewrite' => [
-                'slug' => $this->slug
-            ]
-        ];
-
         // replace defaults with the options passed
-        $options = array_replace_recursive($options, $this->options);
+        $options = array_replace_recursive($this->defaultOptions(), $this->options);
 
         // create and set labels
         if (!isset($options['labels'])) {

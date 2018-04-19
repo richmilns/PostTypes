@@ -116,6 +116,22 @@ class Taxonomy
     }
 
     /**
+     * Returns the default options for the Taxonomy
+     * @since 2.0.4
+     * @return array
+     */
+    public function defaultOptions()
+    {
+        return [
+            'hierarchical' => true,
+            'show_admin_column' => true,
+            'rewrite' => [
+                'slug' => $this->slug,
+            ],
+        ];
+    }
+
+    /**
      * Set the Taxonomy labels
      * @param  array  $labels
      * @return $this
@@ -264,17 +280,8 @@ class Taxonomy
      */
     public function createOptions()
     {
-        // default options
-        $options = [
-            'hierarchical' => true,
-            'show_admin_column' => true,
-            'rewrite' => [
-                'slug' => $this->slug,
-            ],
-        ];
-
         // replace defaults with the options passed
-        $options = array_replace_recursive($options, $this->options);
+        $options = array_replace_recursive($this->defaultOptions(), $this->options);
 
         // create and set labels
         if (!isset($options['labels'])) {

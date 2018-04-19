@@ -1,5 +1,8 @@
 # Changelog
 
+##### v2.0.4
+* Added PrivatePostType and PrivateTaxonomy sub-classes
+
 ##### v2.0.3
 * PHPCS fixes
 
