@@ -13,7 +13,7 @@ Update your `composer.json` file with the following and then run `composer updat
 ```
 {
 ...
-"repositories": [
+    "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/richmilns/PostTypes"
